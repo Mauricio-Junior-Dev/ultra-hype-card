@@ -175,7 +175,7 @@ function Hero() {
 
               {/* card flutuante */}
               <motion.div
-                className="absolute -left-8 bottom-16 w-64 rounded-2xl bg-white p-4 shadow-2xl"
+                className="absolute -left-6 bottom-10 w-64 rounded-2xl bg-white p-4 shadow-2xl"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.8 }}

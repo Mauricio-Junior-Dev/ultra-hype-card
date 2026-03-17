@@ -12,12 +12,12 @@ const infoCards = [
   {
     title: "Horário",
     icon: Clock,
-    text: "Seg a Sáb: 8h às 18h"
+    text: "Seg a Sáb: horário flexível • Dom: 06h às 23h"
   },
   {
     title: "Telefone",
     icon: Phone,
-    text: "(00) 00000-0000"
+    text: "(11) 92164-2182"
   }
 ];
 

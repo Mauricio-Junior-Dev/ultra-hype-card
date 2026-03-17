@@ -9,11 +9,11 @@ function Footer() {
             <Sparkles className="h-5 w-5" />
           </span>
           <span className="text-sm font-semibold">
-            Clean<span className="text-primary">Pro</span>
+            Ultra<span className="text-primary">Hype</span>
           </span>
         </div>
         <p className="text-xs sm:text-sm text-white/40">
-          © 2024 CleanPro Higienização. Todos os direitos reservados.
+          © 2024 UltraHype Higienização. Todos os direitos reservados.
         </p>
       </div>
     </footer>

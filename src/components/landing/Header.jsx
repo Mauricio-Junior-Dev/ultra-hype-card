@@ -39,10 +39,10 @@ function Header() {
           </span>
           <div className="flex flex-col leading-none">
             <span className="text-lg font-extrabold tracking-tight text-white">
-              Clean<span className="text-primary">Pro</span>
+              Ultra<span className="text-primary">Hype</span>
             </span>
             <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-white/40">
-              Higienização
+              Higienização de Estofados
             </span>
           </div>
         </a>
