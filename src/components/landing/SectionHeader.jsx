@@ -42,4 +42,3 @@ function SectionHeader({ badge, title, highlight, subtitle, dark = false }) {
 }
 
 export default SectionHeader;
-

@@ -1,12 +1,12 @@
 import Header from "../components/landing/Header.jsx";
 import Hero from "../components/landing/Hero.jsx";
-import Services from "../components/landing/Services.js";
-import BeforeAfter from "../components/landing/BeforeAfter.js";
-import Benefits from "../components/landing/Benefits.js";
-import Testimonials from "../components/landing/Testimonials.js";
-import HowItWorks from "../components/landing/HowItWorks.js";
-import Contact from "../components/landing/Contact.js";
-import Footer from "../components/landing/Footer.js";
+import Services from "../components/landing/Services.jsx";
+import BeforeAfter from "../components/landing/BeforeAfter.jsx";
+import Benefits from "../components/landing/Benefits.jsx";
+import Testimonials from "../components/landing/Testimonials.jsx";
+import HowItWorks from "../components/landing/HowItWorks.jsx";
+import Contact from "../components/landing/Contact.jsx";
+import Footer from "../components/landing/Footer.jsx";
 import WhatsAppButton from "../components/landing/WhatsAppButton.jsx";
 
 function Home() {
