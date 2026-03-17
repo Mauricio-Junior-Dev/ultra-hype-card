@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5500000000000"; // ajuste para o número real
+const WHATSAPP_NUMBER = "5511921642182"; // DDI + DDD + número
 const DEFAULT_MESSAGE =
   "Olá, gostaria de um orçamento para higienização de estofados";
 

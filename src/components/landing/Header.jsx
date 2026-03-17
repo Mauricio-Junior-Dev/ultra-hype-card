@@ -14,7 +14,11 @@ const navItems = [
 function Header() {
   const [open, setOpen] = useState(false);
 
-  const handleNavClick = (href) => {
+  const handleNavClick = (event, href) => {
+    if (event) {
+      event.preventDefault();
+    }
+
     const el = document.querySelector(href);
     if (el) {
       const y = el.getBoundingClientRect().top + window.scrollY - 80;
@@ -28,10 +32,7 @@ function Header() {
       <div className="section-container flex h-16 md:h-20 items-center justify-between gap-4">
         <a
           href="#inicio"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavClick("#inicio");
-          }}
+          onClick={(e) => handleNavClick(e, "#inicio")}
           className="inline-flex items-center gap-2"
         >
           <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-primary/15 text-primary">
@@ -49,13 +50,14 @@ function Header() {
 
         <nav className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
-            <button
+            <a
               key={item.href}
-              onClick={() => handleNavClick(item.href)}
+              href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
               className="text-sm font-medium text-white/70 hover:text-white transition-colors"
             >
               {item.label}
-            </button>
+            </a>
           ))}
         </nav>
 
@@ -95,13 +97,14 @@ function Header() {
           >
             <div className="section-container flex flex-col gap-1 pb-4 pt-2">
               {navItems.map((item) => (
-                <button
+                <a
                   key={item.href}
-                  onClick={() => handleNavClick(item.href)}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className="w-full rounded-lg px-2 py-3 text-left text-sm font-medium text-white/80 hover:bg-white/5"
                 >
                   {item.label}
-                </button>
+                </a>
               ))}
               <a
                 href={getWhatsAppUrl()}
