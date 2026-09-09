@@ -1,46 +1,30 @@
-import Header from "../components/landing/Header.jsx";
-import Hero from "../components/landing/Hero.jsx";
-import Services from "../components/landing/Services.jsx";
-import BeforeAfter from "../components/landing/BeforeAfter.jsx";
-import Benefits from "../components/landing/Benefits.jsx";
-import Testimonials from "../components/landing/Testimonials.jsx";
-import HowItWorks from "../components/landing/HowItWorks.jsx";
-import Contact from "../components/landing/Contact.jsx";
-import Footer from "../components/landing/Footer.jsx";
-import WhatsAppButton from "../components/landing/WhatsAppButton.jsx";
+import { useEffect, useRef } from "react";
+import { setupPageEffects } from "../pageEffects.js";
 
-function Home() {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Header />
-      <main>
-        <section id="inicio">
-          <Hero />
-        </section>
-        <section id="servicos" className="bg-white">
-          <Services />
-        </section>
-        <section id="antes-depois" className="bg-black">
-          <BeforeAfter />
-        </section>
-        <section className="bg-white">
-          <Benefits />
-        </section>
-        <section id="depoimentos" className="bg-secondary">
-          <Testimonials />
-        </section>
-        <section className="bg-white">
-          <HowItWorks />
-        </section>
-        <section id="contato" className="bg-black">
-          <Contact />
-        </section>
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </div>
-  );
+export default function Home() {
+ const root = useRef(null);
+ useEffect(() => setupPageEffects(root.current), []);
+ return (
+ <div ref={root}>
+
+<a className="skip" href="#conteudo">Pular para o conteúdo</a>
+<div className="scroll-progress" aria-hidden="true"></div>
+<header className="header"><a className="brand" href="#inicio" aria-label="UltraHype início">ultra<span>hype</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1v22M1 12h22M4 4l16 16M4 20 20 4"/></svg></a><button className="menu-toggle" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span></button><nav id="menu" aria-label="Navegação principal"><a href="#servicos">O que cuidamos</a><a href="#processo">Como funciona</a><a href="#duvidas">Dúvidas</a><a className="button small" href="https://wa.me/5511921642182?text=Ol%C3%A1%2C%20UltraHype%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados." target="_blank" rel="noopener">Solicitar orçamento <span aria-hidden="true">↗</span></a></nav></header>
+<main id="conteudo">
+<section className="hero" id="inicio">
+<div className="hero-copy"><p className="eyebrow"><span className="mini-star" aria-hidden="true">✳</span> HIGIENIZAÇÃO DE ESTOFADOS</p><h1>Seu sofá.<br />Uma nova<br /><em>sensação.</em></h1><p className="hero-description">Renove o frescor do seu estofado e o prazer de estar em casa. Cuidado profissional em cada detalhe.</p><a className="button" href="https://wa.me/5511921642182?text=Ol%C3%A1%2C%20UltraHype%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados." target="_blank" rel="noopener">Quero cuidar do meu estofado <span aria-hidden="true">↗</span></a><div className="hero-note"><span className="line-icon" aria-hidden="true">✓</span> Orçamento personalizado para o seu estofado</div></div>
+<div className="hero-visual"><img src="/sofa.jpg" alt="Sofá em uma sala acolhedora com iluminação natural" width="1400" height="1700" fetchpriority="high" /><div className="image-shade"></div><div className="photo-top">MAIS CUIDADO. MAIS CONFORTO.</div><div className="floating-stamp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1v22M1 12h22M4 4l16 16M4 20 20 4"/></svg><span>Seu lugar favorito.<br />Bem cuidado.</span></div><div className="photo-bottom"><span>O bem-estar começa em casa.</span><a href="#servicos" aria-label="Conhecer os serviços">↓</a></div></div>
+<div className="hero-bottom"><span>CUIDADO QUE SE SENTE.</span><span>Role para descobrir <span aria-hidden="true">↓</span></span></div>
+</section>
+<div className="ticker" aria-hidden="true"><div>UMA CASA MAIS ACOLHEDORA <span>✳</span> UM NOVO RESPIRO <span>✳</span> CUIDADO EM CADA FIBRA <span>✳</span> UMA CASA MAIS ACOLHEDORA <span>✳</span> UM NOVO RESPIRO <span>✳</span> CUIDADO EM CADA FIBRA <span>✳</span></div></div>
+<section className="intro section" aria-labelledby="intro-title"><p className="eyebrow reveal">O CONFORTO MERECE CUIDADO</p><h2 className="reveal" id="intro-title">A vida acontece no sofá.<br /><span>A gente cuida do que fica.</span></h2><div className="intro-bottom reveal"><span className="large-star" aria-hidden="true">✳</span><p>Um filme em família, uma pausa na rotina, uma visita especial. Seus estofados fazem parte de tudo isso. A higienização ajuda a remover a sujeira acumulada e a renovar o seu espaço de descanso.</p></div></section>
+<section className="services section" id="servicos"><div className="section-heading reveal"><div><p className="eyebrow">01 / O QUE CUIDAMOS</p><h2>Um cuidado para<br />cada estofado.</h2></div><p>Do seu cantinho de leitura ao sofá da família, cada peça merece atenção.</p></div><div className="service-grid"><article className="service-card reveal"><div className="service-photo sofa-crop"><img src="/sofa.jpg" alt="Estofado de sofá em um ambiente residencial" width="700" height="600" loading="lazy" /><span>01</span></div><div className="service-text"><h3>Sofás</h3><p>Cuidado com assentos, encostos e braços para renovar o conforto do seu dia a dia.</p><a href="https://wa.me/5511921642182?text=Ol%C3%A1%2C%20UltraHype%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados." target="_blank" rel="noopener">Consultar higienização <span aria-hidden="true">↗</span></a></div></article><article className="service-card text-card reveal"><span className="card-number">02</span><svg className="service-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden="true"><path d="M18 35V18a7 7 0 0 1 7-7h14a7 7 0 0 1 7 7v17M12 48h40V30a5 5 0 0 0-10 0v8H22v-8a5 5 0 0 0-10 0v18ZM17 48v8m30-8v8"/></svg><div className="service-text"><h3>Poltronas</h3><p>Atenção aos detalhes da sua peça favorita, respeitando as características do tecido.</p><a href="https://wa.me/5511921642182?text=Ol%C3%A1%2C%20UltraHype%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados." target="_blank" rel="noopener">Consultar higienização <span aria-hidden="true">↗</span></a></div></article><article className="service-card text-card light-card reveal"><span className="card-number">03</span><svg className="service-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.4" aria-hidden="true"><path d="M19 35V13h26v22M15 35h34v9H15zM20 44l-4 14m28-14 4 14M24 18v12m8-12v12m8-12v12"/></svg><div className="service-text"><h3>Cadeiras estofadas</h3><p>Mais cuidado para os lugares que reúnem as pessoas à sua mesa.</p><a href="https://wa.me/5511921642182?text=Ol%C3%A1%2C%20UltraHype%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados." target="_blank" rel="noopener">Consultar higienização <span aria-hidden="true">↗</span></a></div></article></div><p className="service-caption reveal">Tem outro tipo de estofado? Consulte a possibilidade de atendimento.</p></section>
+<section className="process section" id="processo"><div className="process-intro"><p className="eyebrow">02 / COMO FUNCIONA</p><h2>Do primeiro<br />contato ao<br /><em>novo frescor.</em></h2><p>Sem complicar sua rotina.<br />Com atenção ao que seu estofado precisa.</p><a className="text-link" href="https://wa.me/5511921642182?text=Ol%C3%A1%2C%20UltraHype%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados." target="_blank" rel="noopener">Vamos começar <span aria-hidden="true">↗</span></a><div className="process-mark" aria-hidden="true">✳</div></div><div className="steps"><article className="step reveal"><span className="step-number">01</span><div><p className="eyebrow">A CONVERSA</p><h3>Conte o que você precisa.</h3><p>Separe fotos do estofado e informe o tipo de peça e sua região. Esses detalhes ajudam na avaliação e no orçamento.</p></div></article><article className="step reveal"><span className="step-number">02</span><div><p className="eyebrow">O PLANEJAMENTO</p><h3>O cuidado começa na avaliação.</h3><p>Alinhe o serviço, a disponibilidade e as orientações de preparação. O tecido e o estado da peça fazem diferença.</p></div></article><article className="step reveal"><span className="step-number">03</span><div><p className="eyebrow">A HIGIENIZAÇÃO</p><h3>Atenção em cada fibra.</h3><p>A limpeza é definida conforme as características do estofado. Manchas e condições específicas precisam ser avaliadas individualmente.</p></div></article><article className="step reveal"><span className="step-number">04</span><div><p className="eyebrow">O SEU MOMENTO</p><h3>Pronto para voltar a relaxar.</h3><p>Respeite as orientações de secagem e de uso. Depois, é só aproveitar seu espaço de conforto novamente.</p></div></article></div></section>
+<section className="comfort"><img src="/sofa.jpg" alt="Ambiente acolhedor com sofá para relaxar em casa" width="1400" height="800" loading="lazy" /><div className="comfort-overlay"></div><div className="comfort-copy reveal"><p className="eyebrow">UM NOVO RESPIRO PARA A SUA CASA</p><h2>O melhor lugar do mundo<br />é o seu. <em>Cuide dele.</em></h2><a className="button accent" href="https://wa.me/5511921642182?text=Ol%C3%A1%2C%20UltraHype%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados." target="_blank" rel="noopener">Renovar meu estofado <span aria-hidden="true">↗</span></a></div></section>
+<section className="faq section" id="duvidas"><div className="reveal"><p className="eyebrow">03 / DÚVIDAS FREQUENTES</p><h2>Antes de<br />começar.</h2><p>Alguns detalhes para planejar<br />o cuidado com o seu estofado.</p></div><div className="questions reveal"><details><summary>Quanto custa a higienização?<span aria-hidden="true">+</span></summary><p>O orçamento depende do tipo, tamanho e estado do estofado. Envie fotos e informe sua região para receber uma avaliação personalizada.</p></details><details><summary>Quanto tempo leva para secar?<span aria-hidden="true">+</span></summary><p>O tempo varia conforme o tecido, o método de limpeza, a ventilação e o clima. Confirme a estimativa no atendimento e aguarde a secagem completa antes de usar.</p></details><details><summary>Todas as manchas saem?<span aria-hidden="true">+</span></summary><p>Não é possível garantir a remoção de toda mancha. O resultado depende da substância, do tempo de contato e das condições do tecido. Informe também se já aplicou algum produto na peça.</p></details><details><summary>Como me preparo para o atendimento?<span aria-hidden="true">+</span></summary><p>Deixe o acesso ao estofado livre e retire objetos pessoais da peça. Confirme previamente as orientações específicas para o serviço escolhido.</p></details><details><summary>Vocês atendem minha região?<span aria-hidden="true">+</span></summary><p>Informe seu bairro ou CEP ao entrar em contato com a UltraHype para consultar a cobertura e a disponibilidade de atendimento.</p></details></div></section>
+<section className="contact section" id="contato"><div className="contact-top"><p className="eyebrow">SEU ESTOFADO MERECE ESSE CUIDADO</p><span aria-hidden="true">✳</span></div><div className="contact-bottom"><h2>Vamos renovar<br />o seu <em>conforto?</em></h2><div><p>Tenha em mãos uma foto do estofado e seu bairro. Vamos entender o que você precisa.</p><a className="button accent" href="https://wa.me/5511921642182?text=Ol%C3%A1%2C%20UltraHype%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20higieniza%C3%A7%C3%A3o%20de%20estofados." target="_blank" rel="noopener">Falar pelo WhatsApp <span aria-hidden="true">↗</span></a><small>WhatsApp: (11) 92164-2182</small></div></div></section>
+</main><footer><a className="brand" href="#inicio">ultra<span>hype</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1v22M1 12h22M4 4l16 16M4 20 20 4"/></svg></a><p>Higienização de estofados.<br />Cuidado que faz parte da sua casa.</p><a href="#inicio">Voltar ao topo ↑</a><div className="footer-base"><span>© <span id="year">2026</span> UltraHype. Todos os direitos reservados.</span><span>Feito para você se sentir em casa.</span></div></footer>
+
+ </div>
+ );
 }
-
-export default Home;
-
